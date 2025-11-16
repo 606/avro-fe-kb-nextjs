@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Wiki content styling */
+.wiki-content {
+  line-height: 1.8;
+}
+
+.wiki-content h1,
+.wiki-content h2,
+.wiki-content h3,
+.wiki-content h4,
+.wiki-content h5,
+.wiki-content h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.wiki-content h1 { font-size: 2em; }
+.wiki-content h2 { font-size: 1.5em; }
+.wiki-content h3 { font-size: 1.25em; }
+
+.wiki-content p {
+  margin-bottom: 1em;
+}
+
+.wiki-content ul,
+.wiki-content ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.wiki-content li {
+  margin-bottom: 0.5em;
+}
+
+.wiki-content a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.wiki-content a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wiki-content a {
+    color: #60a5fa;
+  }
+}
+
+.wiki-content code {
+  background-color: #f3f4f6;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wiki-content code {
+    background-color: #1f2937;
+  }
+}
+
+.wiki-content pre {
+  background-color: #f3f4f6;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wiki-content pre {
+    background-color: #1f2937;
+  }
+}
+
+.wiki-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.wiki-content blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  color: #6b7280;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wiki-content blockquote {
+    border-left-color: #374151;
+    color: #9ca3af;
+  }
+}
+
