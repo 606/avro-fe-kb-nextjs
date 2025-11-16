@@ -58,6 +58,15 @@ Create a production build:
 npm run build
 ```
 
+### GitHub Pages Deployment
+
+Set `GITHUB_PAGES=true` when building so the site uses the repository base path and asset prefix required by GitHub Pages. The CI workflow applies this flag automatically and copies the raw markdown sources into `out/wiki-source` (including a `wiki.tar.gz` archive) so the published site always ships with the original `.md` files.
+
+```bash
+GITHUB_PAGES=true npm run build
+npx serve out
+```
+
 ### Start Production Server
 
 ```bash
